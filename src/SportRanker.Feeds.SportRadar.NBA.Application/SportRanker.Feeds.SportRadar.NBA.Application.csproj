@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Contracts\SportRanker.Feeds.SportRadar.NBA.Contracts.csproj" />
+    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Definitions\SportRanker.Feeds.SportRadar.NBA.Definitions.csproj" />
+    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Interfaces\SportRanker.Feeds.SportRadar.NBA.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
