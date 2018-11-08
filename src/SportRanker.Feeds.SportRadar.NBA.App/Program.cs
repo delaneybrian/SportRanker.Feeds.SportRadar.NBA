@@ -13,7 +13,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.App
 
             var feedProcessor = container.Resolve<IFeedProcessor>();
 
-            Task.Run(() => feedProcessor.StartProcessing());
+            feedProcessor.StartProcessing().Wait();
 
             Console.ReadKey();
         }
