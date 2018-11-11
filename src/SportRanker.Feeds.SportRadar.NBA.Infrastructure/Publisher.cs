@@ -13,11 +13,16 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
 
         private const string NewNBAFixtureRoutingKey = "results.nba";
 
-        private const  string CloudAMPQUrl = "amqp://lhqadfns:Ox1Z9RVKMsu36ZjbLV0HEzknWsgJi36S@raven.rmq.cloudamqp.com/lhqadfns";
+        private const  string CloudAMPQUrl = @"amqps://lhqadfns:Ox1Z9RVKMsu36ZjbLV0HEzknWsgJi36S@raven.rmq.cloudamqp.com/lhqadfns";
 
         public void PublishFixtureResult(FixtureResult fixtureResult)
         {
-            var factory = new ConnectionFactory() { HostName = CloudAMPQUrl };
+            Uri ampqUri = new Uri(CloudAMPQUrl);
+
+            var factory = new ConnectionFactory()
+            {
+                Uri = ampqUri
+            };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
