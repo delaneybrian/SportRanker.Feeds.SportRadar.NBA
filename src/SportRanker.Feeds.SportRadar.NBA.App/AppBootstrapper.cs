@@ -1,29 +1,10 @@
-﻿using Autofac;
-using SportRanker.Feeds.SportRadar.NBA.Application;
-using SportRanker.Feeds.SportRadar.NBA.Infrastructure;
-using SportRanker.Feeds.SportRadar.NBA.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace SportRanker.Feeds.SportRadar.NBA.App
 {
-    public class AppBootstrapper
+    class AppBootstrapper
     {
-        public static IContainer Bootstrap()
-        {
-            var builder = new ContainerBuilder();
-
-            builder
-                .RegisterType<FeedProcessor>()
-                .As<IFeedProcessor>();
-
-            builder
-                .RegisterType<FeedConsumer>()
-                .As<IFeedConsumer>();
-
-            builder
-                .RegisterType<Publisher>()
-                .As<IPublisher>();
-
-            return builder.Build();
-        }
     }
 }
