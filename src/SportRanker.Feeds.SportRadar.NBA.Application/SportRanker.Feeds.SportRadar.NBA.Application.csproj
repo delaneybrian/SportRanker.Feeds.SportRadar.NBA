@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Contracts\SportRanker.Feeds.SportRadar.NBA.Contracts.csproj" />
+    <PackageReference Include="SportRanker.Contracts.Dto" Version="1.0.0" />
+    <PackageReference Include="SportRanker.Contracts.SystemEvents" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Definitions\SportRanker.Feeds.SportRadar.NBA.Definitions.csproj" />
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Interfaces\SportRanker.Feeds.SportRadar.NBA.Interfaces.csproj" />
   </ItemGroup>

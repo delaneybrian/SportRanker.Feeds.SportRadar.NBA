@@ -2,7 +2,7 @@
 using System.Text;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
-using SportRanker.Feeds.SportRadar.NBA.Contracts;
+using SportRanker.Contracts.SystemEvents;
 using SportRanker.Feeds.SportRadar.NBA.Interfaces;
 
 namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
@@ -13,9 +13,11 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
 
         private const string NewNBAFixtureRoutingKey = "results.nba";
 
+        private const  string CloudAMPQUrl = "amqp://lhqadfns:Ox1Z9RVKMsu36ZjbLV0HEzknWsgJi36S@raven.rmq.cloudamqp.com/lhqadfns";
+
         public void PublishFixtureResult(FixtureResult fixtureResult)
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() { HostName = CloudAMPQUrl };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {

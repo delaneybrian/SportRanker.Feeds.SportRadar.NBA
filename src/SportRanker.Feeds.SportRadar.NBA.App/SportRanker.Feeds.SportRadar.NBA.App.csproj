@@ -9,7 +9,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Application\SportRanker.Feeds.SportRadar.NBA.Application.csproj" />
-    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Contracts\SportRanker.Feeds.SportRadar.NBA.Contracts.csproj" />
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Definitions\SportRanker.Feeds.SportRadar.NBA.Definitions.csproj" />
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Infrastructure\SportRanker.Feeds.SportRadar.NBA.Infrastructure.csproj" />
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Interfaces\SportRanker.Feeds.SportRadar.NBA.Interfaces.csproj" />

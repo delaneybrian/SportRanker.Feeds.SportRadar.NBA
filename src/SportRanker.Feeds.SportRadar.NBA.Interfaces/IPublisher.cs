@@ -1,4 +1,4 @@
-﻿using SportRanker.Feeds.SportRadar.NBA.Contracts;
+﻿using SportRanker.Contracts.SystemEvents;
 
 namespace SportRanker.Feeds.SportRadar.NBA.Interfaces
 {

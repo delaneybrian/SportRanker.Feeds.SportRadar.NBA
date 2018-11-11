@@ -1,4 +1,5 @@
-﻿using SportRanker.Feeds.SportRadar.NBA.Contracts;
+﻿using SportRanker.Contracts.Dto;
+using SportRanker.Contracts.SystemEvents;
 using SportRanker.Feeds.SportRadar.NBA.Definitions;
 
 namespace SportRanker.Feeds.SportRadar.NBA.Application
@@ -10,7 +11,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Application
             return new FixtureResult()
             {
                 SportId = SportId.NBA,
-                FeedSource = FeedSource.SportRadar,
+                Source = SourceId.SportRadar,
                 HomeTeamId = feedFixture.HomeTeamId,
                 HomeTeamName = feedFixture.HomeTeamName,
                 HomeTeamScore = feedFixture.HomeTeamScore,
