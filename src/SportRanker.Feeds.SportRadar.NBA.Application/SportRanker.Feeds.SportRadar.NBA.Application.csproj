@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Definitions\SportRanker.Feeds.SportRadar.NBA.Definitions.csproj" />
+    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Infrastructure\SportRanker.Feeds.SportRadar.NBA.Infrastructure.csproj" />
     <ProjectReference Include="..\SportRanker.Feeds.SportRadar.NBA.Interfaces\SportRanker.Feeds.SportRadar.NBA.Interfaces.csproj" />
   </ItemGroup>
 

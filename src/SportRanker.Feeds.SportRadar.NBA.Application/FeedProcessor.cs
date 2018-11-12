@@ -1,5 +1,6 @@
 ﻿using SportRanker.Feeds.SportRadar.NBA.Interfaces;
 using System.Threading.Tasks;
+using SportRanker.Feeds.SportRadar.NBA.Application.Extensions;
 
 namespace SportRanker.Feeds.SportRadar.NBA.Application
 {
@@ -7,12 +8,15 @@ namespace SportRanker.Feeds.SportRadar.NBA.Application
     {
         public readonly IFeedConsumer _feedConsumer;
         public readonly IPublisher _publisher;
+        public readonly IFixtureResultDeriver _fixtureResultDeriver;
 
         public FeedProcessor(IFeedConsumer feedConsumer,
-            IPublisher publisher)
+            IPublisher publisher,
+            IFixtureResultDeriver fixtureResultDeriver)
         {
             _feedConsumer = feedConsumer;
             _publisher = publisher;
+            _fixtureResultDeriver = fixtureResultDeriver;
         }
 
         public async Task StartProcessing()
@@ -21,9 +25,10 @@ namespace SportRanker.Feeds.SportRadar.NBA.Application
 
             foreach (var feedResult in feedResults)
             {
-                var fixtureResult = ResultConverter.ConvertFromFeedFixtureResult(feedResult);
+                var fixtureResultMaybe = await _fixtureResultDeriver.TryGenerateFixtureResult(feedResult);
 
-                _publisher.PublishFixtureResult(fixtureResult);
+                if(fixtureResultMaybe.TrySome(out var fixtureResult))
+                    _publisher.PublishFixtureResult(fixtureResult);
             }
         }
     }
