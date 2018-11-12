@@ -27,6 +27,10 @@ namespace SportRanker.Feeds.SportRadar.NBA.App
                 .RegisterType<FixtureResultDeriver>()
                 .As<IFixtureResultDeriver>();
 
+            builder
+                .RegisterType<DataProvider>()
+                .As<IDataProvider>();
+
             return builder.Build();
         }
     }
