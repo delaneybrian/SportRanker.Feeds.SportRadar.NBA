@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Threading;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using SportRanker.Contracts.SystemEvents;
@@ -45,6 +46,8 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
                 {
                     Console.WriteLine("Could Not Publish To Queue");
                 }
+
+                Thread.Sleep(100);
             }
         }
     }

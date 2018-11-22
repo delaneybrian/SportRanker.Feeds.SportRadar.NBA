@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -127,8 +128,10 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
                 }
 
                 numDays += 1;
+
+                Thread.Sleep(2000);
             }
-         
+
             return feedFixtures;
         }
     }
