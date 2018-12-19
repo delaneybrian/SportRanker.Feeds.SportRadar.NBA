@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportRanker.Feeds.SportRada
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportRanker.Feeds.SportRadar.NBA.App", "SportRanker.Feeds.SportRadar.NBA.App\SportRanker.Feeds.SportRadar.NBA.App.csproj", "{2A8C5CA0-658D-4412-9D4F-40C20AE2CB97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportRanker.Feeds.SportRadar.NBA.TestApp", "SportRanker.Feeds.SportRadar.NBA.TestApp\SportRanker.Feeds.SportRadar.NBA.TestApp.csproj", "{DA7A03F6-739C-4D7D-BA82-AE763362DCED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2A8C5CA0-658D-4412-9D4F-40C20AE2CB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A8C5CA0-658D-4412-9D4F-40C20AE2CB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A8C5CA0-658D-4412-9D4F-40C20AE2CB97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7A03F6-739C-4D7D-BA82-AE763362DCED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7A03F6-739C-4D7D-BA82-AE763362DCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7A03F6-739C-4D7D-BA82-AE763362DCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7A03F6-739C-4D7D-BA82-AE763362DCED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

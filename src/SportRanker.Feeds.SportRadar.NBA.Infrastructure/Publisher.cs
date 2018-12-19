@@ -14,7 +14,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
 
         private const string NewNBAFixtureRoutingKey = "results.nba";
 
-        private const  string CloudAMPQUrl = @"amqps://lhqadfns:Ox1Z9RVKMsu36ZjbLV0HEzknWsgJi36S@raven.rmq.cloudamqp.com/lhqadfns";
+        private const string CloudAMPQUrl = @"amqps://lhqadfns:Ox1Z9RVKMsu36ZjbLV0HEzknWsgJi36S@raven.rmq.cloudamqp.com/lhqadfns";
 
         public void PublishFixtureResult(FixtureResult fixtureResult)
         {
