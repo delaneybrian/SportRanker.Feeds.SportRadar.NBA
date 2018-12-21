@@ -16,7 +16,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
 
         public void PublishFixtureResult(FixtureResult fixtureResult)
         {
-            Uri ampqUri = new Uri(@"amqps://lhqadfns:Ox1Z9RVKMsu36ZjbLV0HEzknWsgJi36S@raven.rmq.cloudamqp.com/lhqadfns");
+            Uri ampqUri = new Uri(@"amqp://lhqadfns:Ox1Z9RVKMsu36ZjbLV0HEzknWsgJi36S@raven.rmq.cloudamqp.com/lhqadfns");
 
             var factory = new ConnectionFactory()
             {

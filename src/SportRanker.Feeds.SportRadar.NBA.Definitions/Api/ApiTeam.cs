@@ -12,7 +12,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Definitions.Api
         public string Name { get; set; }
 
         [DataMember(Name = "rating")]
-        public int Rating { get; set; }
+        public long Rating { get; set; }
 
         [DataMember(Name = "imageUrl")]
         public string ImageUrl { get; set; }

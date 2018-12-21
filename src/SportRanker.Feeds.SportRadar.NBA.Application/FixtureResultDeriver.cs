@@ -36,13 +36,14 @@ namespace SportRanker.Feeds.SportRadar.NBA.Application
                     {
                         SportId = SportId.NBA,
                         Source = SourceId.SportRadar,
-                        HomeTeamId = feedFixture.HomeTeamId,
-                        HomeTeamName = feedFixture.HomeTeamName,
+                        SourceId = feedFixture.ProviderFixtureId,
+                        HomeTeamId = homeTeam.Id,
+                        HomeTeamName = homeTeam.Name,
                         HomeTeamScore = feedFixture.HomeTeamScore,
-                        AwayTeamId = feedFixture.AwayTeamId,
-                        AwayTeamName = feedFixture.AwayTeamName,
+                        AwayTeamId = awayTeam.Id,
+                        AwayTeamName = awayTeam.Name,
                         AwayTeamScore = feedFixture.AwayTeamScore,
-                        KickOffTimeUtc = feedFixture.KickOffTimeUtc
+                        KickOffTimeUtc = feedFixture.KickOffTimeUtc,
                     });
                 }
             }
