@@ -10,7 +10,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
 {
     public class Publisher : IPublisher
     {
-        private const string NewFixtureExchange = "new_fixture_exchange";
+        private const string NewFixtureExchange = "sportsrivals";
 
         private const string NewNBAFixtureRoutingKey = "results.nba";
 
@@ -27,17 +27,21 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
             {
                 channel.ExchangeDeclare(
                     exchange: NewFixtureExchange,
-                    type: "topic");
+                    type: "topic",
+                    durable: true);
 
                 var message = JsonConvert.SerializeObject(fixtureResult);
 
                 var body = Encoding.UTF8.GetBytes(message);
 
+                IBasicProperties props = channel.CreateBasicProperties();
+                props.ContentType = "text/plain";
+
                 try
                 {
                     channel.BasicPublish(exchange: NewFixtureExchange,
                         routingKey: NewNBAFixtureRoutingKey,
-                        basicProperties: null,
+                        basicProperties: props,
                         body: body);
                 }
                 catch (Exception ex)
@@ -45,7 +49,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
                     Console.WriteLine("Could Not Publish To Queue");
                 }
 
-                Thread.Sleep(100);
+                Thread.Sleep(5000);
             }
         }
     }

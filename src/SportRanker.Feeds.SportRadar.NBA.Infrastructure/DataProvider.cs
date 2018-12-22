@@ -20,7 +20,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
 
         public async Task<Option<Fixture>> GetFixtureByProviderIdAsync(SourceId provider, string providerId)
         {
-            var result = await _httpClient.GetAsync($"http://sports-rivals.appspot.com/api/fixtures/search/findTopBySportsRadarId?name={providerId}");
+            var result = await _httpClient.GetAsync($"https://sportsrivals.cronelea.ie/sportsrivals-data-service/api/fixtures/search/findTopBySportsRadarId?name={providerId}");
 
             if (result.IsSuccessStatusCode)
                 return Option.Some<Fixture>(new Fixture());
@@ -30,7 +30,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.Infrastructure
 
         public async Task<Option<Team>> GetTeamByProviderIdAsync(SourceId provider, string providerId)
         {
-            var result = await _httpClient.GetAsync($"http://sports-rivals.appspot.com/api/teams/search/findFirstBySportRadarId?sportRadarId={providerId}");
+            var result = await _httpClient.GetAsync($"https://sportsrivals.cronelea.ie/sportsrivals-data-service/api/teams/search/findFirstBySportRadarId?sportRadarId={providerId}");
 
             if (result.IsSuccessStatusCode)
             {
