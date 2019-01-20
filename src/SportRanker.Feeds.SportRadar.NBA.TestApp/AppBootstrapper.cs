@@ -20,7 +20,7 @@ namespace SportRanker.Feeds.SportRadar.NBA.TestApp
                 .As<IFeedConsumer>();
 
             builder
-                .RegisterType<FilePublisher>()
+                .RegisterType<Publisher>()
                 .As<IPublisher>();
 
             builder
